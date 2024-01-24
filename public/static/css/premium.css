@@ -1,0 +1,105 @@
+.content-split {
+    display: flex;
+    justify-content: space-between !important;
+}
+p.breadcrumbs a {
+    color: #0354D6;;
+    text-decoration: none;
+    font-size: 15px;
+}
+p.breadcrumbs span {
+    font-size: 15px;
+    color: black;
+}
+p.breadcrumbs a, span {
+    padding-right: 4px;
+    padding-left: 4px;
+}
+.search_news {
+    color: #0354D6;
+    font-weight: 700;
+    padding-right: 4px;
+    padding-left: 2px;
+    font-size: 17px;
+}
+p.latest_news {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 30px;
+    color: #0354D6;
+    padding-bottom: 15px;
+}
+
+.premium {
+    height: auto;
+    border: 0.5px solid #D6D6D6;
+    border-radius: 12px;
+    float: left;
+    width: 100%;
+    padding: 18px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+p.dividend {
+    color: #0354D6;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+.issue-axis a {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: black;
+    line-height: 25px;
+}
+p.share_data {
+    color: #999999;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 0px;
+}
+.pagecommon {
+    padding-left: 17px;
+}
+.common {
+ 
+    height: auto;
+    border: 0.5px solid #D6D6D6;
+    border-radius: 12px;
+    float: left;
+    width: 100%;
+    padding: 18px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+label.written {
+    color: #0354D6;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+.issue-solve-axis {
+    white-space: nowrap;
+    width: 82%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: black;
+}
+.issue-solve-axis a {
+    text-decoration: none;
+}
+p.data {
+    color: #999999;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 0px;
+}
