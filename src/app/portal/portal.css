@@ -88,6 +88,17 @@ span.gainpercentage {
     font-weight: 800!important;
     font-size: 16px!important;
 }
+.topp {
+    position: relative;
+}
+span.gainpercentage {
+    position: absolute;
+    left: 31px;
+    top: 0px;
+}
+span.gainpercentage svg {
+    font-size: 22px;
+}
 .companyvalues p {
     color: #757575;
     font-size: 14px;
@@ -414,8 +425,49 @@ p.reportcontent_stats img {
     float: left;
     width: 100%;
     position: absolute;
-    top: 40%;
+    top: 61%;
 }
 button.owl-prev {
     transform: rotate(180deg);
+}
+button.owl-prev {
+    background: 0 0;
+    color: inherit;
+    border: none;
+    padding: 0!important;
+    font: inherit;
+}
+button.owl-prev {
+    left: -18px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #dee3ff!important;
+    border-radius: 120px;
+    position: absolute;
+}
+button.owl-next.disabled {
+    background: 0 0;
+    color: inherit;
+    border: none;
+    padding: 0!important;
+    font: inherit;
+}
+button.owl-next.disabled {
+    right: -18px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #dee3ff!important;
+    border-radius: 120px;
+    position: absolute;
+}
+.tab {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }

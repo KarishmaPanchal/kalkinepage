@@ -50,7 +50,7 @@ export default function Portal() {
                         <h2>
                           3632.0
                           <span className="curency">CAD</span>
-                          <div>
+                          <div className="topp">
                             <span className="gain">1.60</span>
                             <span className="gainpercentage">
                               (
@@ -426,9 +426,9 @@ export default function Portal() {
               <Col span={24}>
                 <div className="reportcoveredsection">
                   <h2 className="sectionheadings">Report Covered</h2>
-                 
+
                   <div className="datamapp">
-                    {[1, 2, 3, 4, 5, 6,7].map((i) => {
+                    {[1, 2, 3, 4, 5, 6, 7].map((i) => {
                       return (
                         <>
                           <div className="item">
@@ -467,13 +467,40 @@ export default function Portal() {
                   </div>
                   <div className="owl-nav">
                     <button type="button" className="owl-prev">
-                    <Image src={Arrow} />
+                      <Image src={Arrow} />
                     </button>
                     <button type="button" className="owl-next disabled">
-                    <Image src={Arrownew} />
+                      <Image src={Arrownew} />
                     </button>
                   </div>
-                  
+                </div>
+              </Col>
+            </Row>
+            <Row>
+              <Col span={24}>
+                <h2 className="sectionheadings">Stock Research & News</h2>
+                <div className="tab">
+                  <ul class="nav nav-tabs kalgainers_hometabs">
+                    <li class="nav-item">
+                      <a
+                        href="#stockresearch"
+                        class="nav-link active"
+                        data-bs-toggle="tab"
+                      >
+                        Stock Research
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        href="#trendingnewsarticle"
+                        class="nav-link"
+                        data-bs-toggle="tab"
+                      >
+                        News
+                      </a>
+                    </li>
+                  </ul>
+                  <a href="/" className="newsall">View all</a>
                 </div>
               </Col>
             </Row>
