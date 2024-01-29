@@ -173,6 +173,10 @@ h3.sectionssubheadings {
     float: left;
     width: 100%;
 }
+img.space {
+    width: 84%;
+    height: auto;
+}
 .legend {
     font-size: 12px;
     display: inline-block;
@@ -183,4 +187,235 @@ h3.sectionssubheadings {
     font-weight: bold;
     letter-spacing: 0.5px;
    
+}
+.companyfundamentals_rightnav {
+    border-radius: 12px;
+    border: 1px rgb(218,220,224) solid;
+    margin-bottom: 16px;
+    padding: 16px 16px 0 16px;
+    box-sizing: border-box;
+    float: left;
+    width: 100%;
+}
+h2.sectionheadings {
+    color: #191919;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px;
+    margin-bottom: 15px;
+    margin-top: 42px;
+}
+ul.fundamentallist {
+    float: left;
+    width: 100%;
+    padding-left: 0px;
+    list-style: none;
+    margin-bottom: 0px;
+}
+ul.fundamentallist li {
+    border-top: 1px solid rgb(218,220,224);
+    padding: 8px 0;
+    min-height: 43px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: .7875rem;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+    color: rgb(95,99,104);
+    margin-right: 8px;
+}
+ul.fundamentallist li span {
+    font-weight: bold;
+    color: #000;
+    font-size: 0.8rem;
+}
+p.peerindustry {
+    float: left;
+    width: 100%;
+    padding-left: 0px;
+    margin-bottom: 10px;
+}
+p.peerindustry {
+    margin-bottom: 15px !important;
+}
+
+p.peerindustry span {
+    margin-right: 15px;
+}
+p.peerindustry b {
+    font-weight: 700;
+    color: black;
+    font-size: 17px;
+}
+span.industryvalues {
+    color: #0254d6;
+    font-weight: 600;
+    font-size: 17px;
+}
+table thead tr {
+    background: #FFF;
+    box-shadow: 0px 3px 3px 0px rgba(22, 33, 164, 0.30);
+    margin-bottom: 10px;
+}
+thead tr th {
+    background-color: #1b1d3b !important;
+    color: #fff;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+table tr th{
+         padding: 0.5rem;
+        font-size: 13px;
+        font-weight: 400;
+}
+table.peercompare_table tbody tr:nth-child(even) td:first-child {
+    background-color: #edeef2;
+}
+table.peercompare_table tbody tr:nth-child(odd) td:first-child {
+    background-color: white
+}
+table.peercompare_table tr td:first-child {
+    position: sticky;
+    left: 0px;
+    box-shadow: 5px 0 5px -2px #c8c3c3;
+    display: block;
+}
+tr:nth-child(even) {
+    background-color: #edeef2;
+}
+span.compareticker_name {
+    font-weight: bold;
+    color: black;
+    padding: 0px;
+   
+}
+table.peercompare_table a {
+    color: #0d6efd;
+    text-decoration: underline;
+}
+span.similarcomp_percent {
+    font-weight: 500;
+    line-height: 1.5rem;
+    padding: 4px 10px;
+    border-radius: 8px;
+    width: min-content;
+    min-width: 40px;
+}
+td.table_data {
+    padding-left: 8px;
+}
+td.text-end {
+    padding-left: 8px;
+}
+
+
+.isnegative {
+    color: rgb(165,14,14);
+    background: rgb(252,232,230);
+}
+.ispositive {
+    color: #0fa202;
+    background: rgb(230,244,234);
+}
+.responsive {
+    overflow-x: scroll;
+}
+.reportcovered_data {
+    border-radius: 8px;
+    border: 1px solid rgb(218,220,224);
+    padding: 10px;
+}
+.compreport_stats {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+}
+p.compreport_stats span.reportcomp_category {
+    background-color: #1b1d3b;
+    padding: 4px 7px;
+    line-height: 1rem;
+    font-size: .6875rem;
+    letter-spacing: 0px;
+    text-transform: capitalize;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 5px;
+}
+.reportcovered_data h3 {
+    line-height: 1.25rem;
+    font-size: .875rem;
+    letter-spacing: .0178571429em;
+    font-weight: 500;
+    position: relative;
+    color: #000;
+    margin-bottom: 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.reportcovered_data h3 a {
+    line-height: 1.25rem;
+    font-size: .875rem;
+    letter-spacing: .0178571429em;
+    font-weight: 500;
+    position: relative;
+    color: #000;
+    margin-bottom: 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-decoration: none;
+}
+p.reporttime {
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+p.reportcontent_stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0px;
+    align-items: center;
+}
+p.reportcontent_stats span {
+    display: grid;
+}
+span.reportcomp_price {
+    line-height: 1.5rem;
+    font-size: 1.2rem;
+    letter-spacing: .00625em;
+    font-weight: 500;
+    color: #000;
+}
+p.reportcontent_stats label {
+    font-size: 12px;
+    text-align: center;
+}
+p.reportcontent_stats img {
+    width: 15px;
+    height: auto;
+    max-width: 15px;
+    margin: auto;
+    padding: 3.6px 0px;
+}
+.datamapp {
+    display: flex;
+}
+.item {
+    margin: 10px;
+}
+.owl-nav {
+    float: left;
+    width: 100%;
+    position: absolute;
+    top: 40%;
+}
+button.owl-prev {
+    transform: rotate(180deg);
 }
