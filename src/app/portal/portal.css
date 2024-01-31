@@ -385,28 +385,35 @@ td.text-end {
 .responsive {
     overflow-x: scroll;
 }
+.coveredsection {
+    display: flex;
+}
+
+.item {
+    margin: 10px;
+}
 .reportcovered_data {
     border-radius: 8px;
-    border: 1px solid rgb(218,220,224);
+    border: 1px solid #dadce0;
     padding: 10px;
+    width: 100%;
 }
-.compreport_stats {
+p.compreport_stats {
     margin-bottom: 8px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     font-size: 14px;
-    font-weight: bold;
-    color: black;
+    font-weight: 700;
 }
-p.compreport_stats span.reportcomp_category {
+span.reportcomp_category {
     background-color: #1b1d3b;
-    padding: 4px 7px;
+    padding: 6px 6px;
     line-height: 1rem;
     font-size: .6875rem;
-    letter-spacing: 0px;
+    letter-spacing: 0;
     text-transform: capitalize;
-    font-weight: bold;
+    font-weight: 700;
     color: #fff;
     border-radius: 5px;
 }
@@ -417,7 +424,7 @@ p.compreport_stats span.reportcomp_category {
     font-weight: 500;
     position: relative;
     color: #000;
-    margin-bottom: 0px;
+    margin-bottom: 0;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -429,7 +436,7 @@ p.compreport_stats span.reportcomp_category {
     font-weight: 500;
     position: relative;
     color: #000;
-    margin-bottom: 0px;
+    margin-bottom: 0;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -438,11 +445,12 @@ p.compreport_stats span.reportcomp_category {
 p.reporttime {
     font-size: 13px;
     margin-bottom: 5px;
+    color: black;
 }
 p.reportcontent_stats {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 0px;
+    margin-bottom: 0;
     align-items: center;
 }
 p.reportcontent_stats span {
@@ -464,59 +472,74 @@ p.reportcontent_stats img {
     height: auto;
     max-width: 15px;
     margin: auto;
-    padding: 3.6px 0px;
+    padding: 3.6px 0;
 }
-.datamapp {
-    display: flex;
+.item span.reportcomp_action span {
+    display: none;
 }
-.item {
-    margin: 10px;
+span.ispositive {
+    text-align: center;
+    border-radius: 4px;
+    padding: 0 10px 3px;
 }
-.owl-nav {
+.ispositive {
+    color: #0fa202;
+    background: #e6f4ea;
+}
+.owl-carouselstockcovered .item .actionrecommendation {
+    display: none;
+}
+.btn_nav {
     float: left;
     width: 100%;
     position: absolute;
-    top: 61%;
+    top: 58%;
 }
-button.owl-prev {
+.left-btn {
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button.btn-prev {
+    width: 39px;
+    height: 39px;
+    background-color: rgb(222, 227, 255)!important;
+    color: rgb(255, 255, 255)!important;
+    border-radius: 120px;
+    border: none;
+    position: absolute;
+    left: -13px;
+}
+.left-btn img {
     transform: rotate(180deg);
+    position: relative;
+    z-index: 2;
+    left: 8px;
+
 }
-button.owl-prev {
-    background: 0 0;
-    color: inherit;
-    border: none;
-    padding: 0!important;
-    font: inherit;
-}
-button.owl-prev {
-    left: -18px;
-    width: 30px;
-    height: 30px;
+.right-btn {
+    float: right;
     display: flex;
-    align-items: center;
     justify-content: center;
-    background-color: #dee3ff!important;
-    border-radius: 120px;
-    position: absolute;
+    align-items: center;
 }
-button.owl-next.disabled {
-    background: 0 0;
-    color: inherit;
+button.btn-next {
+    right: 7px;
+    position: absolute;
+    width: 39px;
+    height: 39px;
+    background-color: rgb(222, 227, 255)!important;
+    color: rgb(255,255,255)!important;
+    border-radius: 120px;
     border: none;
-    padding: 0!important;
-    font: inherit;
 }
-button.owl-next.disabled {
-    right: -18px;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #dee3ff!important;
-    border-radius: 120px;
-    position: absolute;
+.right-btn img {
+    position: relative;
+    z-index: 2;
+    left: 12px;
 }
+
 .tab {
     display: flex;
     align-items: center;
@@ -691,4 +714,23 @@ p.compprofile_description {
     font-size: 16px;
     color: black;
     line-height: 23px;
+}
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+    ul.exchangecode  {
+          display: flex; 
+    }
+    h1.companyname {
+       font-size: 32px;
+        
+    }
+    .companychart {
+       display: none;
+    }
+    .companyvalues h2 {
+     display: block;      
+
+        
+    }
+    
+        
 }

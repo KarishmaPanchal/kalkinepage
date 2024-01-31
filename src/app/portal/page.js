@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Row, Col } from "antd";
+import { Row, Col, Carousel } from "antd";
 import styles from "./portal.css";
 import Image from "next/image";
 import Vector from "../../../public/static/image/vector.webp";
@@ -18,48 +18,65 @@ import Article from "../../../public/static/image/latestarticleone.png";
 import { MdArrowUpward } from "react-icons/md";
 import { IoIosContact } from "react-icons/io";
 import { IoIosArrowRoundDown } from "react-icons/io";
-
 import { HiShare } from "react-icons/hi";
 import { IoIosArrowRoundUp } from "react-icons/io";
+
+
 export default function Portal() {
+  const carouselRef = React.createRef();
+  const handle_PrevClick = () => {
+    carouselRef.current.prev();
+  };
+  const handle_NextClick = () => {
+    carouselRef.current.next();
+  };
+
   return (
     <div>
       <div className="container-fluid tabnavgation">
         <div className="container">
-        <Row>
+          <Row>
             <Col span={24}>
               <ul className="company_navagation">
                 <li>
-                  <a href="#company_overview" className="active">Overview</a>
+                  <a href="#company_overview" className="active">
+                    Overview
+                  </a>
                 </li>
                 <li>
-                  <a href="#company_overview" className="active">Financial</a>
+                  <a href="#company_overview" className="active">
+                    Financial
+                  </a>
                 </li>
                 <li>
-                  <a href="#company_overview" className="active">Peer Comparsion</a>
+                  <a href="#company_overview" className="active">
+                    Peer Comparsion
+                  </a>
                 </li>
                 <li>
-                  <a href="#company_overview" className="active">Reports</a>
+                  <a href="#company_overview" className="active">
+                    Reports
+                  </a>
                 </li>
                 <li>
-                  <a href="#company_overview" className="active">Stock Research & News</a>
+                  <a href="#company_overview" className="active">
+                    Stock Research & News
+                  </a>
                 </li>
                 <li>
-                  <a href="#company_overview" className="active">Profile</a>
+                  <a href="#company_overview" className="active">
+                    Profile
+                  </a>
                 </li>
-
               </ul>
-              
             </Col>
           </Row>
-
         </div>
-
       </div>
       <div className="container-fluid">
         <div className="container">
           <Row>
-            <Col span={12}>
+            <Col span={12} sm={24} xs={24} md={12}>
               <div className="code">
                 <ul className="exchangecode">
                   <li className="active">
@@ -70,15 +87,14 @@ export default function Portal() {
                     <HiShare />
                     Share
                   </li>
-                
                 </ul>
                 <div className="name">
                   <h1 className="companyname">Constellation Software Inc.</h1>
                   <Row>
-                    <Col span={12}>
+                    <Col  xs={24} sm={24} md={6} lg={6}>
                       <div className="companyvalues">
                         <h4>
-                          {" "}
+                      
                           Technology
                           <span className="box">CA</span>
                           CSU
@@ -98,7 +114,7 @@ export default function Portal() {
                         <button>Active</button>
                       </div>
                     </Col>
-                    <Col span={12}>
+                    <Col  xs={24} sm={24} md={6} lg={6}>
                       <div className="companyrange">
                         <h3>Day Range</h3>
                         <div className="range">
@@ -106,8 +122,16 @@ export default function Portal() {
                             <span>3600.00</span>
                             <span>3642.00</span>
                           </div>
-                       
-                            <input type="range" step="0.001" id="volume"  className="range3" name="volume" min="3600.00" max="3642.00"/>
+
+                          <input
+                            type="range"
+                            step="0.001"
+                            id="volume"
+                            className="range3"
+                            name="volume"
+                            min="3600.00"
+                            max="3642.00"
+                          />
 
                           <div className="rangespan">
                             <span>Low</span>
@@ -136,15 +160,16 @@ export default function Portal() {
                         </div>
                       </div>
                     </Col>
-                  </Row>
-                </div>
-              </div>
-            </Col>
-            <Col span={12}>
+                    <Col xs={24} sm={24} md={12} lg={12}>
               <div className="companychart">
                 <Image src={capture} />
               </div>
             </Col>
+                  </Row>
+                </div>
+              </div>
+            </Col>
+            
           </Row>
           <Row>
             <Col span={18}>
@@ -338,8 +363,9 @@ export default function Portal() {
                       </td>
                       <td className="text-end">
                         -0.12
-                        < span className="similarcomp_percent isnegative">
-                        <IoIosArrowRoundDown/>0.09%
+                        <span className="similarcomp_percent isnegative">
+                      
+                          0.09%
                         </span>
                       </td>
                       <td className="text-end">132.22</td>
@@ -456,56 +482,192 @@ export default function Portal() {
             <Col span={24}>
               <div className="reportcoveredsection">
                 <h2 className="sectionheadings">Report Covered</h2>
+                <Carousel
+                  ref={carouselRef}
+                  autoplay
+                  slidesToShow={5}
+                  dots={true}
+                  dotActiveWidth={30}
+                  dotHeight={3}
+                  dotWidth={16}
+                  onClick={Event}
+                ></Carousel>
 
-                <div className="datamapp">
-                  {[1, 2, 3, 4, 5, 6, 7].map((i) => {
-                    return (
-                      <>
-                        <div className="item">
-                          <div className="reportcovered_data">
-                            <p className="compreport_stats">
-                              <span className="reportcomp_category">
-                                Small-Cap
-                              </span>
-                              <span>High</span>
-                            </p>
-                            <h3>
-                              <a href="/">Medifast, Inc</a>
-                            </h3>
-                            <p className="reporttime">
-                              3&nbsp;days, 22&nbsp;hours ago
-                            </p>
-                            <p className="reportcontent_stats">
-                              <span className="reportcomp_price">
-                                <label>Rec. Price</label>
-                                {/* <span className="recommended_value">US$_</span> */}
-                                <Image src={Lock} />
-                              </span>
-                              <span className="reportcomp_action">
-                                <label>Action</label>
-                                <span className="ispositive">
-                                  {/* <span className="actionrecomendation">_</span> */}
-                                </span>
-                                <Image src={Lock} />
-                              </span>
-                            </p>
-                          </div>
-                        </div>
-                      </>
-                    );
-                  })}
+                <div className="coveredsection">
+                  <div className="item">
+                    <div className="reportcovered_data">
+                      <p className="compreport_stats">
+                        <span className="reportcomp_category">Small-Cap</span>
+                        <span style={{ textAlign: "center" }}>
+                          Risk Rating
+                          <span className="reportcomp_category">High</span>
+                        </span>
+                      </p>
+                      <h3>
+                        <a href="https://kalkine.ca/report/medifast-inc-43">
+                          Medifast, Inc.
+                        </a>
+                      </h3>
+                      <p class="reporttime">5&nbsp;days, 1&nbsp;hour ago</p>
+                      <p className="reportcontent_stats">
+                        <span className="reportcomp_price">
+                          <label>Rec. Price</label>
+
+                          <Image src={Lock} />
+                        </span>
+                        <span className="reportcomp_action">
+                          <label>Action</label>
+                          <span className="ispositive">
+                            <span className="actionrecommendation">_</span>
+                          </span>
+                          <Image src={Lock} />
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="item">
+                    <div className="reportcovered_data">
+                      <p className="compreport_stats">
+                        <span className="reportcomp_category">Small-Cap</span>
+                        <span style={{ textAlign: "center" }}>
+                          Risk Rating
+                          <span className="reportcomp_category">High</span>
+                        </span>
+                      </p>
+                      <h3>
+                        <a href="https://kalkine.ca/report/medifast-inc-43">
+                          Medifast, Inc.
+                        </a>
+                      </h3>
+                      <p class="reporttime">5&nbsp;days, 1&nbsp;hour ago</p>
+                      <p className="reportcontent_stats">
+                        <span className="reportcomp_price">
+                          <label>Rec. Price</label>
+
+                          <Image src={Lock} />
+                        </span>
+                        <span className="reportcomp_action">
+                          <label>Action</label>
+                          <span className="ispositive">
+                            <span className="actionrecommendation">_</span>
+                          </span>
+                          <Image src={Lock} />
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+                  <div className="item">
+                    <div className="reportcovered_data">
+                      <p className="compreport_stats">
+                        <span className="reportcomp_category">Small-Cap</span>
+                        <span style={{ textAlign: "center" }}>
+                          Risk Rating
+                          <span className="reportcomp_category">High</span>
+                        </span>
+                      </p>
+                      <h3>
+                        <a href="https://kalkine.ca/report/medifast-inc-43">
+                          Medifast, Inc.
+                        </a>
+                      </h3>
+                      <p class="reporttime">5&nbsp;days, 1&nbsp;hour ago</p>
+                      <p className="reportcontent_stats">
+                        <span className="reportcomp_price">
+                          <label>Rec. Price</label>
+
+                          <Image src={Lock} />
+                        </span>
+                        <span className="reportcomp_action">
+                          <label>Action</label>
+                          <span className="ispositive">
+                            <span className="actionrecommendation">_</span>
+                          </span>
+                          <Image src={Lock} />
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+                  <div className="item">
+                    <div className="reportcovered_data">
+                      <p className="compreport_stats">
+                        <span className="reportcomp_category">Small-Cap</span>
+                        <span style={{ textAlign: "center" }}>
+                          Risk Rating
+                          <span className="reportcomp_category">High</span>
+                        </span>
+                      </p>
+                      <h3>
+                        <a href="https://kalkine.ca/report/medifast-inc-43">
+                          Medifast, Inc.
+                        </a>
+                      </h3>
+                      <p class="reporttime">5&nbsp;days, 1&nbsp;hour ago</p>
+                      <p className="reportcontent_stats">
+                        <span className="reportcomp_price">
+                          <label>Rec. Price</label>
+
+                          <Image src={Lock} />
+                        </span>
+                        <span className="reportcomp_action">
+                          <label>Action</label>
+                          <span className="ispositive">
+                            <span className="actionrecommendation">_</span>
+                          </span>
+                          <Image src={Lock} />
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+                  <div className="item">
+                    <div className="reportcovered_data">
+                      <p className="compreport_stats">
+                        <span className="reportcomp_category">Small-Cap</span>
+                        <span style={{ textAlign: "center" }}>
+                          Risk Rating
+                          <span className="reportcomp_category">High</span>
+                        </span>
+                      </p>
+                      <h3>
+                        <a href="https://kalkine.ca/report/medifast-inc-43">
+                          Medifast, Inc.
+                        </a>
+                      </h3>
+                      <p class="reporttime">5&nbsp;days, 1&nbsp;hour ago</p>
+                      <p className="reportcontent_stats">
+                        <span className="reportcomp_price">
+                          <label>Rec. Price</label>
+
+                          <Image src={Lock} />
+                        </span>
+                        <span className="reportcomp_action">
+                          <label>Action</label>
+                          <span className="ispositive">
+                            <span className="actionrecommendation">_</span>
+                          </span>
+                          <Image src={Lock} />
+                        </span>
+                      </p>
+                    </div>
+                  </div>
                 </div>
-                <div className="owl-nav">
-                  <button type="button" className="owl-prev">
-                    <Image src={Arrow} />
-                  </button>
-                  <button type="button" className="owl-next disabled">
-                    <Image src={Arrownew} />
-                  </button>
+
+                <div className="btn_nav">
+                  <div className="left-btn" onClick={handle_PrevClick}>
+                    <button type="button" className="btn-prev">
+                      <Image src={Arrow} />
+                    </button>
+                  </div>
+                  <div className="right-btn" onClick={handle_NextClick}>
+                    <button type="button" className="btn-next">
+                      <Image src={Arrow} />
+                    </button>
+                  </div>
                 </div>
               </div>
             </Col>
           </Row>
+
           <Row>
             <Col span={24}>
               <h2 className="sectionheadings">Stock Research & News</h2>
@@ -530,7 +692,9 @@ export default function Portal() {
                     </a>
                   </li>
                 </ul>
-                <a href="/" class="newsall">View All</a>
+                <a href="/" class="newsall">
+                  View All
+                </a>
               </div>
             </Col>
           </Row>

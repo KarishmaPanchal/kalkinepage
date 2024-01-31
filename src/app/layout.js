@@ -33,12 +33,12 @@ export default function RootLayout({ children }) {
       <link rel="stylesheet" href="https://b2b.kalkine.co.in/assets/web/css/style.css?ver=234"/>
       </head>
       <body >
-      {/* <Navigation/>  */}
-      {/* <Premium/> */}
+      {/* <Navigation/>  
+       <Premium/> */}
       {children}
-      {/* <Footer Title={'Our Design'}/> */}
-      {/* <Disclaimer/> */}
-     
+       {/* <Footer Title={'Our Design'}/> 
+       <Disclaimer/> 
+      */}
     </body>
     </html>
   )
