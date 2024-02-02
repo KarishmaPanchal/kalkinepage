@@ -196,10 +196,13 @@ input[type=range]::-webkit-slider-thumb {
     height: 100px;
     width: 100%;
 }
+.companyrange {
+    padding-top: 145px;
+}
 
 .companychart {
     padding: 20px;
-    margin-top: 112px;
+    margin-top: 38px;
 }
 h2.sectionheading {
     color: #191919;
@@ -258,6 +261,15 @@ img.space {
     box-sizing: border-box;
     float: left;
     width: 100%;
+}
+h2.sectionheading {
+    color: #191919;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px;
+    margin-bottom: 15px;
+    margin-top: 0px;
 }
 h2.sectionheadings {
     color: #191919;
@@ -396,7 +408,7 @@ td.text-end {
     border-radius: 8px;
     border: 1px solid #dadce0;
     padding: 10px;
-    width: 100%;
+   width: 93%;
 }
 p.compreport_stats {
     margin-bottom: 8px;
@@ -525,7 +537,7 @@ button.btn-prev {
     align-items: center;
 }
 button.btn-next {
-    right: 7px;
+    right: -17px;
     position: absolute;
     width: 39px;
     height: 39px;
@@ -723,14 +735,181 @@ p.compprofile_description {
        font-size: 32px;
         
     }
+    .companyrange {
+        padding-top: 0px;
+    }
     .companychart {
-       display: none;
+        padding: 0px;
+        margin-top: 20px;
     }
     .companyvalues h2 {
      display: block;      
-
+    }
+    h2.sectionheadings {
+        margin-top: 0px;
+    }
+    .companyfundamentals_rightnav {
+        margin-top: 20px;
+    }
+    .coveredsection {
+       display: block;
+    }
+    .reportcovered_data {
         
     }
+    h2.sectionheading {
+        margin-bottom: 9px;
+        margin-top: 29px;
+    }
+    ul.latestarticleul li {
+       width: 100%;
+    }
+    ul.latestarticleul li img {
+       
+        width: 100%;
+
+    }
+    .articlecontent {
+        width: 100%;
+        padding-left: 0px;
+    }
+    p.compprofile_description {
+        text-align: justify;
+        padding-top: 26px;
+    }
+    .legendcommon {
+        margin-left: 78px;
+    }
     
+}
+@media  screen and (min-width : 481px) and (max-width : 768px) {
+    .companyrange {
+        padding-top: 0px;
+    }
+    .companychart {
+        padding: 0px;
+        margin-top: 20px;
+    }
+    h2.sectionheadings {
+        margin-top: 25px;
+    }
+    .legendcommon {
+        text-align: center;
+    }
+    img.space {
+        width: 100%;
+        height: auto;
+    }
+    .companyfundamentals_rightnav {
+        margin-top: 18px;
+    }
+    h2.sectionheading {
+        margin-top: 10px;
+    }
+    ul.latestarticleul li img {
+        width: 100%;
+    }
+    ul.latestarticleul li {
+        width: 47.5%;
+    }
+    .articlecontent {
+        float: left;
+        width: 100%;
+        padding-left: 0px;
+    }
+    ul.latestarticleul li :nth-child(odd) {
+        margin-right: 2%;
+       
+    }
+    /* ul.latestarticleul {
         
+    } */
+    .reportcovered_data {
+        width: 100%;
+    }
+    p.compprofile_description {
+        text-align: justify;
+        padding-top: 0px;
+    }
+}
+@media  screen and (min-width : 769px) and (max-width : 1024px) {
+    .companyvalues h2 {
+        flex-direction: column;
+    }
+    .companyvalues p {
+        color: #757575;
+        font-size: 15px;
+    }
+    .companychart {
+        padding: 0px;
+        margin-top: 38px;
+        padding-top: 19px;
+        padding-left: 20px;
+        
+    }
+    h2.sectionheadings {
+        margin-top: 23px;
+    }
+    img.space {
+        width: 93%;
+        height: auto;
+    }
+    .legendcommon {
+        padding-left: 58px;
+    }
+    .legend {
+        font-size: 8px;
+        display: flex;
+        padding: 2px 10px;
+        margin-right: 79px;
+        border-radius: 5px;
+        color: #fff;
+        font-weight: bold;
+        letter-spacing: 0.5px;
+        margin-bottom: 2px;
+    }
+    ul.latestarticleul li {
+        width: 47.5%;
+    }
+    p.compprofile_description {
+        padding-right: 20px;
+        font-size: 16px;
+    }
+
+
+}
+@media only screen and (min-width :1025px) and (max-width : 1200px) {
+    .companyvalues h2 {
+        flex-direction: column;
+    }
+    .companyvalues p {
+        color: #757575;
+        font-size: 15px;
+    }
+    .companyrange {
+        padding-top: 119px;
+    }
+    img.space {
+        width: 93%;
+        height: auto;
+    }
+    .legendcommon {
+        padding-left: 58px;
+    }
+    .legend {
+        font-size: 8px;
+        display: flex;
+        padding: 2px 10px;
+        margin-right: 79px;
+        border-radius: 5px;
+        color: #fff;
+        font-weight: bold;
+        letter-spacing: 0.5px;
+        margin-bottom: 2px;
+    }
+    ul.latestarticleul li {
+        width: 47.5%;
+    }
+    
+
 }
