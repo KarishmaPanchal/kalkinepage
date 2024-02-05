@@ -212,6 +212,9 @@ h2.sectionheading {
     line-height: 22px;
     margin-bottom: 15px;
 }
+.tab-content {
+    padding-right: 20px;
+}
 ul.nav.nav-tabs.financialstabs {
     float: left;
     width: 100%;
@@ -754,9 +757,7 @@ p.compprofile_description {
     .coveredsection {
        display: block;
     }
-    .reportcovered_data {
-        
-    }
+    
     h2.sectionheading {
         margin-bottom: 9px;
         margin-top: 29px;
@@ -778,11 +779,19 @@ p.compprofile_description {
         padding-top: 26px;
     }
     .legendcommon {
-        margin-left: 78px;
+        margin-left: 46px;
+    }
+    span.industryvalues {
+        color: #0254d6;
+        font-weight: 600;
+        font-size: 14px;
+    }
+    p.peerindustry span {
+        margin: 0px;
     }
     
 }
-@media  screen and (min-width : 481px) and (max-width : 768px) {
+@media only screen and (min-width: 481px) and (max-width: 768px) {
     .companyrange {
         padding-top: 0px;
     }
@@ -832,13 +841,23 @@ p.compprofile_description {
         padding-top: 0px;
     }
 }
-@media  screen and (min-width : 769px) and (max-width : 1024px) {
-    .companyvalues h2 {
-        flex-direction: column;
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    ul.exchangecode {
+        display: flex;
     }
+    .companyrange {
+        padding-top: 0px;
+    }
+    /* .companyvalues h2 {
+        flex-direction: column;
+    } */
+    
     .companyvalues p {
         color: #757575;
         font-size: 15px;
+    }
+    .companyrange {
+        padding-top: 0px;
     }
     .companychart {
         padding: 0px;
@@ -854,19 +873,17 @@ p.compprofile_description {
         width: 93%;
         height: auto;
     }
-    .legendcommon {
+    /* .legendcommon {
         padding-left: 58px;
-    }
+    } */
     .legend {
         font-size: 8px;
-        display: flex;
-        padding: 2px 10px;
-        margin-right: 79px;
-        border-radius: 5px;
-        color: #fff;
-        font-weight: bold;
-        letter-spacing: 0.5px;
-        margin-bottom: 2px;
+    padding: 2px 10px;
+    margin-right: 80px;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
     }
     ul.latestarticleul li {
         width: 47.5%;
@@ -874,42 +891,28 @@ p.compprofile_description {
     p.compprofile_description {
         padding-right: 20px;
         font-size: 16px;
-    }
+    } 
+   
 
 
 }
-@media only screen and (min-width :1025px) and (max-width : 1200px) {
-    .companyvalues h2 {
+@media only screen and (min-width:1025px) and (max-width: 1200px) {
+    ul.exchangecode  {
+        display: flex; 
+  }
+  .companyvalues h2 {
         flex-direction: column;
-    }
+    } 
     .companyvalues p {
         color: #757575;
         font-size: 15px;
     }
-    .companyrange {
-        padding-top: 119px;
-    }
-    img.space {
-        width: 93%;
-        height: auto;
-    }
     .legendcommon {
-        padding-left: 58px;
-    }
-    .legend {
-        font-size: 8px;
-        display: flex;
-        padding: 2px 10px;
-        margin-right: 79px;
-        border-radius: 5px;
-        color: #fff;
-        font-weight: bold;
-        letter-spacing: 0.5px;
-        margin-bottom: 2px;
-    }
-    ul.latestarticleul li {
-        width: 47.5%;
+        padding-left: 57px;
     }
     
+    .legendcommon {
+        padding-left: 6px;
+    }
 
 }

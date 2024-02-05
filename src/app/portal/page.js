@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { Row, Col, Carousel } from "antd";
 import "./portal.css";
 import Image from "next/image";
@@ -20,14 +20,26 @@ import { IoIosContact } from "react-icons/io";
 import { IoIosArrowRoundDown } from "react-icons/io";
 import { HiShare } from "react-icons/hi";
 import { IoIosArrowRoundUp } from "react-icons/io";
+import IncomStatement from "./incomStatement";
+import Balancesheet from "./Balancesheet";
+import CashFlowData from "./CashFlowData";
 
 export default function Portal() {
+  
+
   const carouselRef = React.createRef();
+
   const handle_PrevClick = () => {
     carouselRef.current.prev();
   };
+
   const handle_NextClick = () => {
     carouselRef.current.next();
+  };
+  const [activeTab, setActiveTab] = useState("keyratios");
+  const handleTabClick = (tabId) => {
+    console.log("tabId", tabId);
+    setActiveTab(tabId);
   };
 
   return (
@@ -75,92 +87,94 @@ export default function Portal() {
       <div className="container-fluid">
         <div className="container">
           <Row>
-            <Col xs={24} md={12} >
-             <Row>
-              <Col xl={12} xs={24} md={24} sm={24} lg={6}>
-                <div className="code">
-                  <ul className="exchangecode">
-                    <li className="active">
-                      TSX
-                      <Image src={Vector} />
-                    </li>
-                    <li className="share_company">
-                      <HiShare />
-                      Share
-                    </li>
-                  </ul>
-                  <div className="name">
-                    <h1 className="companyname">Constellation Software Inc.</h1>
+            <Col xs={24} md={12} xl={12} sm={24} lg={12}>
+              <Row >
+                <Col xl={12} xs={24} md={24} sm={24} lg={12}>
+                  <div className="code">
+                    <ul className="exchangecode">
+                      <li className="active">
+                        TSX
+                        <Image src={Vector} />
+                      </li>
+                      <li className="share_company">
+                        <HiShare />
+                        Share
+                      </li>
+                    </ul>
+                    <div className="name">
+                      <h1 className="companyname">
+                        Constellation Software Inc.
+                      </h1>
 
-                    <div className="companyvalues">
-                      <h4>
-                        Technology
-                        <span className="box">CA</span>
-                        CSU
-                      </h4>
-                      <h2>
-                        3632.0
-                        <span className="curency">CAD</span>
-                        <div className="topp">
-                          <span className="gain">1.60</span>
-                          <span className="gainpercentage">
-                            (<IoIosArrowRoundUp />
-                            0.04%)
-                          </span>
-                        </div>
-                      </h2>
-                      <p>Last update at 2024-01-23T19:46:00Z</p>
-                      <button>Active</button>
+                      <div className="companyvalues">
+                        <h4>
+                          Technology
+                          <span className="box">CA</span>
+                          CSU
+                        </h4>
+                        <h2>
+                          3632.0
+                          <span className="curency">CAD</span>
+                          <div className="topp">
+                            <span className="gain">1.60</span>
+                            <span className="gainpercentage">
+                              (<IoIosArrowRoundUp />
+                              0.04%)
+                            </span>
+                          </div>
+                        </h2>
+                        <p>Last update at 2024-01-23T19:46:00Z</p>
+                        <button>Active</button>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </Col>
-              <Col xl={12} xs={24} md={24} sm={24} lg={6}>
-                <div className="companyrange">
-                  <h3>Day Range</h3>
-                  <div className="range">
-                    <div className="rangespan">
-                      <span>3600.00</span>
-                      <span>3642.00</span>
+                </Col>
+                <Col xl={12} xs={24} md={24} sm={24} lg={12} >
+                  <div className="companyrange">
+                    <h3>Day Range</h3>
+                    <div className="range">
+                      <div className="rangespan">
+                        <span>3600.00</span>
+                        <span>3642.00</span>
+                      </div>
+
+                      <input
+                        type="range"
+                        step="0.001"
+                        id="volume"
+                        className="range3"
+                        name="volume"
+                        min="3600.00"
+                        max="3642.00"
+                      />
+
+                      <div className="rangespan">
+                        <span>Low</span>
+                        <span>High</span>
+                      </div>
                     </div>
-
-                    <input
-                      type="range"
-                      step="0.001"
-                      id="volume"
-                      className="range3"
-                      name="volume"
-                      min="3600.00"
-                      max="3642.00"
-                    />
-
-                    <div className="rangespan">
-                      <span>Low</span>
-                      <span>High</span>
+                    <h3> 52 Week Range</h3>
+                    <div className="range">
+                      <div className="rangespan">
+                        <span>3663.87</span>
+                        <span>3663.87</span>
+                      </div>
+                      <input
+                        type="range"
+                        min="2224.88"
+                        max="3663.87"
+                        value="3623.00"
+                        class="range3"
+                        step="0.001"
+                        disabled=""
+                      ></input>
+                      <div className="rangespan">
+                        <span>Low</span>
+                        <span>High</span>
+                      </div>
                     </div>
                   </div>
-                  <h3> 52 Week Range</h3>
-                  <div className="range">
-                    <div className="rangespan">
-                      <span>3663.87</span>
-                      <span>3663.87</span>
-                    </div>
-                    <input
-                      type="range"
-                      min="2224.88"
-                      max="3663.87"
-                      value="3623.00"
-                      class="range3"
-                      step="0.001"
-                      disabled=""
-                    ></input>
-                    <div className="rangespan">
-                      <span>Low</span>
-                      <span>High</span>
-                    </div>
-                  </div>
-                </div>
-              </Col>
+                </Col>
               </Row>
             </Col>
             <Col xl={12} xs={24} md={12} sm={24} lg={12}>
@@ -170,17 +184,21 @@ export default function Portal() {
             </Col>
           </Row>
           <Row>
-            <Col xl={18} xs={24} md={24}>
+            <Col xl={18} xs={24}  md={24} sm={24} lg={18}>
               <Row>
                 <div className="financialsection">
                   <h2 className="sectionheadings">Financial</h2>
+
                   <div className="tabs">
                     <ul class="nav nav-tabs financialstabs">
                       <li class="nav-item">
                         <a
                           href="#keyratios"
-                          class="nav-link active"
-                          data-bs-toggle="tab"
+                          // class="nav-link active"
+                          className={`nav-link ${
+                            activeTab === "keyratios" ? "active" : ""
+                          }`}
+                          onClick={() => handleTabClick("keyratios")}
                         >
                           Charts
                         </a>
@@ -188,8 +206,10 @@ export default function Portal() {
                       <li class="nav-item">
                         <a
                           href="#incomestatement"
-                          class="nav-link "
-                          data-bs-toggle="tab"
+                          className={`nav-link ${
+                            activeTab === "incomestatement" ? "active" : ""
+                          }`}
+                          onClick={() => handleTabClick("incomestatement")}
                         >
                           Income Statement
                         </a>
@@ -197,8 +217,10 @@ export default function Portal() {
                       <li class="nav-item">
                         <a
                           href="#balancesheet"
-                          class="nav-link"
-                          data-bs-toggle="tab"
+                          className={`nav-link ${
+                            activeTab === "balancesheet" ? "active" : ""
+                          }`}
+                          onClick={() => handleTabClick("balancesheet")}
                         >
                           Balance Sheet
                         </a>
@@ -206,8 +228,11 @@ export default function Portal() {
                       <li class="nav-item">
                         <a
                           href="#cashflow"
-                          class="nav-link"
-                          data-bs-toggle="tab"
+                          className={`nav-link ${
+                            activeTab === "cashflow" ? "active" : ""
+                          }`}
+                          onClick={() => handleTabClick("cashflow")}
+                          // data-bs-toggle="tab"
                         >
                           Cash Flow
                         </a>
@@ -216,65 +241,95 @@ export default function Portal() {
                   </div>
                 </div>
               </Row>
-              <Row>
-                <Col xl={8} xs={24} md={12} sm={24}>
-                  <h3 className="sectionssubheadings">Income Statement</h3>
-                  <Image className="space" src={Graphs} />
-                  <div className="legendcommon">
-                    <div
-                      className="legend"
-                      style={{ "background-color": "rgb(4, 84, 214);" }}
-                    >
-                      <span>Total Revenue</span>
-                    </div>
-                    <div
-                      className="legend"
-                      style={{ "background-color": "rgb(245, 133, 51);" }}
-                    >
-                      <span>Net Income</span>
-                    </div>
-                  </div>
-                </Col>
 
-                <Col xl={8} xs={24} md={12} sm={24}>
-                  <h3 className="sectionssubheadings">Balancesheet</h3>
-                  <Image className="space" src={Graphs} />
-                  <div className="legendcommon">
-                    <div
-                      className="legend"
-                      style={{ "background-color": "rgb(4, 84, 214);" }}
-                    >
-                      <span>Total Assest</span>
-                    </div>
-                    <div
-                      className="legend"
-                      style={{ "background-color": "rgb(245, 133, 51);" }}
-                    >
-                      <span>Total Liabalities</span>
-                    </div>
+              {/* starting */}
+              <div className="tab-content">
+                {activeTab === "keyratios" && (
+                  <div className="tab-pane active" id="keyratios">
+                    {/* Add your charts component here */}
                   </div>
-                </Col>
-                <Col xl={8} xs={24} md={12} sm={24}>
-                  <h3 className="sectionssubheadings">Change In Cash</h3>
-                  <Image className="space" src={Graphss} />
-                </Col>
-                <Col xl={8} xs={24} md={12} sm={24}>
-                  <h3 className="sectionssubheadings">Total Operating Cash</h3>
-                  <Image className="space" src={Graphsss} />
-                </Col>
-                <Col xl={8} xs={24} md={12} sm={24}>
-                  <h3 className="sectionssubheadings">
-                    Earning Per Share (EPS)
-                  </h3>
-                  <Image className="space" src={Graphssss} />
-                </Col>
-                <Col xl={8} xs={24} md={12} sm={24}>
-                  <h3 className="sectionssubheadings">Dividends Paid</h3>
-                  <Image className="space" src={Graphsssss} />
-                </Col>
-              </Row>
+                )}
+                {activeTab === "incomestatement" && (
+                  <div className="tab-pane active" id="incomestatement">
+                    <IncomStatement />
+                  </div>
+                )}
+                {activeTab === "balancesheet" && (
+                  <div className="tab-pane active" id="balancesheet">
+                    <Balancesheet />
+                  </div>
+                )}
+                {activeTab === "cashflow" && (
+                  <div className="tab-pane active" id="cashflow">
+                    <CashFlowData />
+                  </div>
+                )}
+              </div>
+
+              {/* ending */}
+              {activeTab === "keyratios" && (
+                <Row>
+                  <Col xl={8} xs={24} md={12} sm={12} lg={8}>
+                    <h3 className="sectionssubheadings">Income Statement</h3>
+                    <Image className="space" src={Graphs} />
+                    <div className="legendcommon">
+                      <div
+                        className="legend"
+                        style={{ "background-color": "rgb(4, 84, 214);" }}
+                      >
+                        <span>Total Revenue</span>
+                      </div>
+                      <div
+                        className="legend"
+                        style={{ "background-color": "rgb(245, 133, 51);" }}
+                      >
+                        <span>Net Income</span>
+                      </div>
+                    </div>
+                  </Col>
+
+                  <Col xl={8} xs={24} md={12} sm={12} lg={8}>
+                    <h3 className="sectionssubheadings">Balancesheet</h3>
+                    <Image className="space" src={Graphs} />
+                    <div className="legendcommon">
+                      <div
+                        className="legend"
+                        style={{ "background-color": "rgb(4, 84, 214);" }}
+                      >
+                        <span>Total Assest</span>
+                      </div>
+                      <div
+                        className="legend"
+                        style={{ "background-color": "rgb(245, 133, 51);" }}
+                      >
+                        <span>Total Liabalities</span>
+                      </div>
+                    </div>
+                  </Col>
+                  <Col xl={8} xs={24} md={12} sm={12} lg={8} >
+                    <h3 className="sectionssubheadings">Change In Cash</h3>
+                    <Image className="space" src={Graphss} />
+                  </Col>
+                  <Col xl={8} xs={24} md={12} sm={12} lg={8}>
+                    <h3 className="sectionssubheadings">
+                      Total Operating Cash
+                    </h3>
+                    <Image className="space" src={Graphsss} />
+                  </Col>
+                  <Col xl={8} xs={24} md={12} sm={12} lg={8}>
+                    <h3 className="sectionssubheadings">
+                      Earning Per Share (EPS)
+                    </h3>
+                    <Image className="space" src={Graphssss} />
+                  </Col>
+                  <Col xl={8} xs={24} md={12} sm={12} lg={8}>
+                    <h3 className="sectionssubheadings">Dividends Paid</h3>
+                    <Image className="space" src={Graphsssss} />
+                  </Col>
+                </Row>
+              )}
             </Col>
-            <Col xl={6} xs={24} md={24}>
+            <Col xl={6} xs={24} md={24} sm={24} lg={6}>
               <div className="companyfundamentals_rightnav">
                 <h2 className="sectionheading">Fundamental</h2>
                 <ul className="fundamentallist">
@@ -821,7 +876,7 @@ export default function Portal() {
             <Col xl={12} xs={24} md={12}>
               <h2 className="sectionheadings">Profile</h2>
               <div className="descriptionbox">
-                <input type="checkbox" />
+                <input type="checkbox" id="expanded" />
                 <p className="compprofile_description">
                   TerrAscend Corp. cultivates, processes, and sells medical and
                   adult use cannabis in Canada and the United States. The
@@ -851,7 +906,7 @@ export default function Portal() {
               <div className="contact">
                 <ul className="comprofile_contact">
                   <li>
-                    <IoIosContact />
+                    {/* <IoIosContact /> */}
                     Employees :<b>972</b>
                   </li>
                 </ul>
